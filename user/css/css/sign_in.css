@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+.material-symbols-outlined {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold; 
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'Kalam';
+    -webkit-font-feature-settings: 'Kalam';
+    -webkit-font-smoothing: antialiased;
+    height: 1em;
+    width: 1em;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kalam", cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 80vh;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.box::before,
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, 
+        transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: ani_sign_in 6s linear infinite;
+}
+.box::after {
+    animation-delay: -3s;
+}
+
+.line::before,
+.line::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, 
+        transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: ani_sign_in 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.line::after {
+    animation-delay: -4.5s;
+}
+@keyframes ani_sign_in {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    background: linear-gradient(135deg,#45f3ff,#fed90f,#ff2770);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+
+.box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0 10px;
+    pointer-events: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+    font-size: 0.75em;
+    transform: translateY(-34px);
+    background: linear-gradient(135deg,#45f3ff,#fed90f,#ff2770);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #8f8f8f;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+    height: 35px;
+    background-color: #8f8f8f;
+}
+
+.box form .box_links {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.box .text_sign_up {
+    color: #8f8f8f;
+    font-size: 15px;
+}
+.box .text_sign_up b {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 45px;
+}
+
+.box form .box_links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.box form .box_links a:hover,
+.box form .box_links a:nth-child(3) {
+    background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+
+.btn_sign_in {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 100px; 
+    overflow: hidden;
+}
+.btn_sign_in::before,
+.btn_sign_in::after {
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    z-index: -1;
+    background: linear-gradient(130deg,greenyellow,pink,cyan);
+    border-radius: 100px;
+    animation: btn_animation 3s linear infinite;
+}
+@keyframes btn_animation {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}		
+}
+
+.btn_sign_in:active {
+    transition: 500ms all;
+	transform: scale(1.1);
+}
+
+.btn_sign_in {
+    opacity: 0.8;
+}
+
+label {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+label::before {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-left: 220px;
+}
+
+input:placeholder-shown ~ label::before {
+    content: attr(data-empty);
+    color: blue;
+}
+
+input:not(:placeholder-shown):valid ~ label::before {
+    content: attr(data-valid);
+    color: green;
+}
+
+input:invalid ~ label::before {
+    content: attr(data-invalid);
+    color: red;
+}
+
+
+
+.box_icon_signin {
+    display: flex;
+    background: red;
+    width: 100% ;
+    height: 1200px
+}
+
+.social_list {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.box_links_2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.box_links_2 a {
+    margin: 20px 0 ;
+    font-size: 12px;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.box_links_2 .home_page {
+    color: #fff;
+    font-size: 16px;
+}
+
+.box form .box_links_2 a:hover,
+.box form .box_links_2 a:nth-child(3) {
+    background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+
+.box_login_using_with {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.google, .github,
+.facebook, .instagram {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), 
+		rgba(255, 255, 255, 0.1)) no-repeat center/cover;
+    border-radius: 10px 5px;
+    text-decoration: none;
+    width: 38px;
+    height: 40px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.box_login_using_with i {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box_login_using_with h6 {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.box_login_using_with .google:hover,
+.box_login_using_with .github:hover {
+    scale: 1.2;
+    width: 80px;
+    justify-content: center;
+    gap: 5px;
+    transition: 500ms all;
+}
+.box_login_using_with .facebook:hover,
+.box_login_using_with .instagram:hover {
+    scale: 1.2;
+    width: 120px;
+    font-size: 20px;
+    justify-content: center;
+    gap: 5px;
+    transition: 500ms all;
+}
+
+.google:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.github:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.facebook:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.instagram:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.google i {
+    color: #f5022a;
+}
+.github i {
+    color: #000000;
+}
+.facebook i {
+    color: #076af3;
+}
+.instagram i {
+    color: #c16fc1fa;
+}
+
+.box_login_using_with a:active {
+	transform: scale(1.1);
+}

@@ -7,11 +7,12 @@
 			$ad_lname=$_POST['ad_lname'];
 			$ad_id=$_SESSION['ad_id'];
             $ad_email=$_POST['ad_email'];
-           // $doc_pwd=sha1(md5($_POST['doc_pwd']));
             $ad_dpic=$_FILES["ad_dpic"]["name"];
+            // $ad_phone=$_POST['ad_phone'];
+			// $ad_andress=$_POST['ad_andress'];
 		    move_uploaded_file($_FILES["ad_dpic"]["tmp_name"],"images/users/".$_FILES["ad_dpic"]["name"]);
 
-			$query="UPDATE his_admin SET ad_fname=?, ad_lname=?,  ad_email=?, ad_dpic=? WHERE ad_id = ?";
+			$query="UPDATE his_user SET ad_fname=?, ad_lname=?,  ad_email=?, ad_dpic=? WHERE ad_id = ?";
 			$stmt = $connect->prepare($query);
 			$rc=$stmt->bind_param('ssssi', $ad_fname, $ad_lname, $ad_email, $ad_dpic, $ad_id);
 			$stmt->execute();
@@ -30,7 +31,7 @@
             $ad_id=$_SESSION['ad_id'];
             $ad_pwd=sha1(md5($_POST['ad_pwd']));//double encrypt 
             
-			$query="UPDATE his_admin SET ad_pwd =? WHERE ad_id = ?";
+			$query="UPDATE his_user SET ad_pwd =? WHERE ad_id = ?";
 			$stmt = $connect->prepare($query);
 			$rc=$stmt->bind_param('si', $ad_pwd, $ad_id);
 			$stmt->execute();
@@ -52,7 +53,7 @@
             <?php include('inc/nav.php');?>
             <?php
                 $aid=$_SESSION['ad_id'];
-                $ret="select * from his_admin where ad_id=?";
+                $ret="select * from his_user where ad_id=?";
                 $stmt= $connect->prepare($ret) ;
                 $stmt->bind_param('i',$aid);
                 $stmt->execute() ;//ok
@@ -67,12 +68,6 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="page-title-box">
-                                        <div class="page-title-right">
-                                            <ol class="breadcrumb m-0">
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">User</a></li>
-                                                <li class="breadcrumb-item active">Profile</li>
-                                            </ol>
-                                        </div>
                                         <h4 class="page-title"><?php echo $row->ad_fname;?> <?php echo $row->ad_lname;?>'s Profile</h4>
                                     </div>
                                 </div>
@@ -112,7 +107,7 @@
                                             <div class="tab-pane show active" id="aboutme">
 
                                             <form method="post" enctype="multipart/form-data">
-                                                    <h5 class="mb-3 text-uppercase bg-light p-2"><i class="mdi mdi-earth mr-1"></i> Personal Info</h5>
+                                                    <h5 class="mb-3 text-uppercase bg-light p-2"><i class='bx bxs-info-square'></i> Personal Info</h5>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -142,28 +137,28 @@
                                                         </div>
                                                     </div>
 
-                                                    <h5 class="mb-3 text-uppercase bg-light p-2"><i class="mdi mdi-earth mr-1"></i>Contact Info & Social</h5>
-                                                    <div class="row">
+                                                    <h5 class="mb-3 text-uppercase bg-light p-2"><i class='bx bxs-contact' ></i> Social</h5>
+                                                    <!-- <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label for="first_name">Phone</label>
-                                                                <input type="text" name="ad_fname"  class="form-control" id="first_name" placeholder="<?php echo $row->ad_fname;?>">
+                                                                <label for="phone">Phone</label>
+                                                                <input type="text" name=""  class="form-control" id="" placeholder="">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label for="last_name">Address</label>
-                                                                <input type="text" name="ad_lname" class="form-control" id="last_name" placeholder="<?php echo $row->ad_lname;?>">
+                                                                <label for="address">Address</label>
+                                                                <input type="text" name="" class="form-control" id="" placeholder="">
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="social-fb">Facebook</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-facebook-square"></i></span>
+                                                                        <span class="input-group-text"><i class='bx bxl-facebook'></i></span>
                                                                     </div>
                                                                     <input type="text" class="form-control" id="social-fb" placeholder="Url">
                                                                 </div>
@@ -174,7 +169,7 @@
                                                                 <label for="social-tw">Twitter</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-twitter"></i></span>
+                                                                        <span class="input-group-text"><i class='bx bxl-twitter'></i></span>
                                                                     </div>
                                                                     <input type="text" class="form-control" id="social-tw" placeholder="Username">
                                                                 </div>
@@ -188,7 +183,7 @@
                                                                 <label for="social-insta">Instagram</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-instagram"></i></span>
+                                                                        <span class="input-group-text"><i class='bx bxl-instagram'></i></span>
                                                                     </div>
                                                                     <input type="text" class="form-control" id="social-insta" placeholder="Url">
                                                                 </div>
@@ -199,7 +194,7 @@
                                                                 <label for="social-gh">Github</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-github"></i></span>
+                                                                        <span class="input-group-text"><i class='bx bxl-github'></i></span>
                                                                     </div>
                                                                     <input type="text" class="form-control" id="social-gh" placeholder="Username">
                                                                 </div>
@@ -250,7 +245,6 @@
                 </div>
             <?php }?>
         </div>
-        <div class="rightbar-overlay"></div>
         <script src="js/vendor.min.js"></script>
         <script src="js/app.min.js"></script>
     </body>

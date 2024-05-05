@@ -51,14 +51,19 @@
                     <button type="button" name="" class="btn_started">
                         Get Start
                     </button>
-                    <a href="sign_in.php" type="button" class="btn_login">
-                        Login
+                    <a href="sign_in.php">
+                        <button class="btn_login">Sign in</button>
                     </a>
                     <p>Check any weather</p>
                 </div>
             </div>
             <div class="container">
                 <div class="input_field">
+                    <div class="go-back">
+                        <a class="btn_home" href="layout_basic.php">
+                            <i class='bx bx-log-out bx-tada' ></i>
+                        </a>
+                    </div>
                     <i class='bx bx-search-alt'></i>
                     <input id="input_search_id" class="input_search" type="text" name="search"
                         placeholder="Search City..." autocomplete="chrome">

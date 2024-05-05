@@ -35,7 +35,7 @@
   --heading: 5.6rem;
   --title-1: 3rem;
   --title-2: 2rem;
-  --title-3: 1.5rem;
+  --title-3: 2rem;
   --body-1: 2.2rem;
   --body-2: 2rem;
   --body-3: 1.6rem;
@@ -100,14 +100,12 @@ button {
 
 sub {
   vertical-align: baseline;
+  font-size: 0.5em;
 }
 
 sup {
-  vertical-align: top;
-}
-
-sub , sup {
-  font-size: 0.75em;
+  vertical-align: middle;
+  font-size: 0.4em;
 }
 
 html {
@@ -124,7 +122,7 @@ body {
 }
 
 @font-face {
-  font-family:'Kalam' ;
+  font-family:'Kalam';
   font-style: normal;
   font-weight: 400;
   src: url(/user/fonts/material-symbol-rounded.woff2) format('woff2');
@@ -220,7 +218,7 @@ article.wrapper::before {
   margin-left: 10px;
   font-size: var(--title-3);
   font-weight: normal;
-  background: linear-gradient(150deg,purple,brown,blue,darkgreen,peru);
+  background: linear-gradient(150deg,#fff, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% 300%;
@@ -229,7 +227,7 @@ article.wrapper::before {
 
 .title-4 {
   margin-left: 10px;
-  font-size: var(--title-3);
+  font-size: 1.5rem;
   font-weight: var(--weight-semiBold);
   background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
   -webkit-background-clip: text;
@@ -354,7 +352,7 @@ article.wrapper::before {
 --------------------------------- Current_weather_card ---------------------------------
 --------------------------------------------------------------------------------------*/
 .card {
-  background-color: var(--surface);
+  background-color: rgba(0, 0, 0, 0.5);
   color: var(--on-surface);
 }
 
@@ -518,7 +516,7 @@ article.wrapper::before {
 
 .highlights-card .wrapper {
   justify-content: space-between;
-  gap: 16px;
+  gap: 5px;
 }
 
 .highlights-card .card-list {
@@ -558,9 +556,15 @@ article.wrapper::before {
 
 .text_icon {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
-
+.text_icon_2 {
+  display: flex;
+}
+.text_icon_2 .text_set {
+  margin-top: 10px;
+  margin-left: -2px;
+}
 @keyframes icon_Air {
 	0% {
 		left:0;
@@ -654,12 +658,15 @@ nav .options button.active {
 /*--------------------------------------------------------------------------------------
 --------------------------------- Media ------------------------------------------------
 --------------------------------------------------------------------------------------*/
-@media (min-width: 700px) {
+@media (min-width: 830px) {
   .wrapper {
       padding: 24px;
   }
   .title-1 {
-      --title-1: 3rem;
+    --title-1: 2.5rem;
+  }
+  .title-3 {
+      --title-3: 1.5rem;
   }
   .section > .title-2 {
       margin-block-end: 16px;
@@ -678,7 +685,7 @@ nav .options button.active {
   }
 
   article.wrapper {
-      padding-block-start: 0;
+      padding-block-start: 5px;
       grid-template-columns: 280px minmax(1, 1fr);
       align-items: flex-start;
       gap: 24px;
@@ -699,7 +706,7 @@ nav .options button.active {
       height: 120px;
   }
   .highlights .m-icon {
-      font-size: 3.6rem;
+      font-size: 2.6rem;
   }
   .highlights-card.one .card-item {
       width: 25%;
@@ -719,4 +726,71 @@ nav .options button.active {
   .slider-list::after {
       min-width: 12px;
   }
+}
+
+@media (min-width: 1200px) {
+  .title-1 {
+      --title-1: 2.5rem;
+  }
+  .title-3 {
+      --title-3: 1.5rem;
+  }
+
+  .highlights_list {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .highlights-card:nth-child(-n+2) {
+      grid-column: span 3;
+      height: 160px;
+  }
+  .highlights-card:nth-child(n+3) {
+      height: 120px;
+  }
+  .highlights .m-icon {
+      font-size: 2.6rem;
+  }
+  .highlights-card.one .card-item {
+      width: 25%;
+      flex-direction: column-reverse;
+      gap: 8px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------
+--------------------------------- keyframes ------------------------------------------------
+--------------------------------------------------------------------------------------*/
+@keyframes show_alert {
+	0% {
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(-10%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+@keyframes hide_alert {
+	0% {
+		transform: translateX(-10px);
+	}
+	40% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(-10%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes timeOut {
+	to {
+		width: 0;
+	}
 }

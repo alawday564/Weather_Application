@@ -25,8 +25,8 @@
     zoom: 100%;
     border-radius: 50%;
     object-fit: cover;
-    width: 32px;
-    height: 22px;
+    width: 34px;
+    height: 24px;
 }
 
 .dropdown_content {
@@ -52,11 +52,16 @@
     align-items: center;
     gap: 15px;
     border-radius: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.dropdown_content span {
+    font-weight: bold;
 }
 
 .dropdown_content a:hover {
-    color: #4097fe;
-    background-color: #333;
+    color: #fff;
+    background-color: rgb(0,0,0,0.5);
     transition: 0.5s all;
 }
 
@@ -66,8 +71,17 @@
 
 .dropdown_welcome h6 {
     font-weight: bold;
-    color: black;
+    color: #333;
     text-align: center;
     font-size: 16px;
-
+    margin-top: 10px;
+}
+.dropdown_welcome i {
+    width: 90%;
+    height: 2px;
+    display: flex;
+    margin-left: 10px;
+    background: #000;
+    position: absolute;
+    border-radius: 5px;
 }

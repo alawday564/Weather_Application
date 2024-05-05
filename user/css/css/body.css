@@ -113,444 +113,452 @@
 	}
 }
 /* -------------------------------- Body ------------------------------- */
-		*{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			letter-spacing: 0.4px;
-			font-family: "Kalam", cursive;
-			font-weight: 700;
-  			font-style: normal;
-		}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.4px;
+	font-family: "Kalam", cursive;
+	font-weight: 700;
+	font-style: normal;
+}
 
-		html{
-			overflow: hidden ;
-			scroll-behavior: smooth;
-			height: 100%;
-		}
+html{
+	overflow: hidden ;
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	/* max-width: 100%; */
+	zoom: 80%;
+	background: linear-gradient(130deg,greenyellow,pink,cyan);
+	background-size: cover;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	height: 100%; 
+	overflow-x: hidden;
+	backdrop-filter: blur(3.5px);
+	scroll-behavior: smooth;
 	
-		body {
-			/* max-width: 100%; */
-			zoom: 80%;
-			background: linear-gradient(130deg,greenyellow,pink,cyan);
-			background-size: cover;
-			object-fit: cover;
-			background-repeat: no-repeat;
-			height: 100%; 
-			overflow-x: hidden;
-			backdrop-filter: blur(3.5px);
-			scroll-behavior: smooth;
-			
-			align-items: center;
-			justify-content: center;
-			display: flex;
-		}
-		.home_container {
-			width: 100%;
-			/* width: 600px; */
-			height: 100%;
-			overflow: hidden;
-		}
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.home_container {
+	width: 100%;
+	/* width: 600px; */
+	height: 100%;
+	overflow: hidden;
+}
 
-		.home_page {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			background:linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)),
-				url('https://wowslider.com/sliders/demo-64/data1/images/galaxy252885.jpg');
-			background-size: cover;
-			object-fit: cover;
-			background-repeat: no-repeat;
-			width: 100%;
-			height:834px;
-			height:100%;
-			justify-content: center;
-			/* margin: auto; */
-			transition: 0.8s ease;
-			overflow: hidden;
-		}
-		.home_page.active
-		{
-			transform:translateY(-100%);
-		}
-		.weather_front_img
-		{
-			max-width: 150px;
-			object-fit: cover;
-		}
-		.home_page_contents
-		{
-			/* margin: 120px 15px 15px 15px ; */
-			border-radius: 15px;
-			backdrop-filter: blur(12px);
-			width: 80%;
-			/* height: 80%; */
-			text-align: center;
-			padding:50px 10px;
-			position: relative;
-			z-index: 1;
-			color: white;
+.home_page {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background:linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)),
+		url('https://wowslider.com/sliders/demo-64/data1/images/galaxy252885.jpg');
+	background-size: cover;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height:834px;
+	height:100%;
+	justify-content: center;
+	/* margin: auto; */
+	transition: 0.8s ease;
+	overflow: hidden;
+}
+.home_page.active
+{
+	transform:translateY(-100%);
+}
+.weather_front_img
+{
+	max-width: 150px;
+	object-fit: cover;
+}
+.home_page_contents
+{
+	/* margin: 120px 15px 15px 15px ; */
+	border-radius: 15px;
+	backdrop-filter: blur(12px);
+	width: 80%;
+	/* height: 80%; */
+	text-align: center;
+	padding:50px 10px;
+	position: relative;
+	z-index: 1;
+	color: white;
 
-		}
-		.home_page_contents::before
-		{
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			backdrop-filter: blur(15px);
-			border-radius: 15px;
-			z-index: -1;
-			border:1px solid rgba(255,255,255,0.3);
-			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(255, 255, 255, 0.2);
-		}
-		.home_page_contents h2 {
-			width: 200px;
-			font-size: 25px;
-			font-weight: bold;
-			margin: 20px auto;
-			background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400% 400%;
-			animation: animation_text 4s ease-in-out infinite;
-		}
-		.home_page_contents p {
-			font-weight: bold;
-			background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400% 400%;
-			animation: animation_text_2 4s ease-in-out infinite;
-		}
+}
+.home_page_contents::before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(15px);
+	border-radius: 15px;
+	z-index: -1;
+	border:1px solid rgba(255,255,255,0.3);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(255, 255, 255, 0.2);
+}
+.home_page_contents h2 {
+	width: 200px;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 20px auto;
+	background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+	animation: animation_text 4s ease-in-out infinite;
+}
+.home_page_contents p {
+	font-weight: bold;
+	background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+	animation: animation_text_2 4s ease-in-out infinite;
+}
+/*---------------------------------------
+---------------btn_layout----------------
+---------------------------------------*/
+.btn_started,
+.btn_login {
+	font-size: 15px;
+	padding: 10px 30px;
+	border-radius: 35px;
+	font-weight: bold;
+	color: black;
+	border: none;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+.btn_started:hover,
+.btn_login:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #240b36;
+	transition: 500ms ease-in-out;
+}
+.btn_started::before,
+.btn_login::before {
+	position: absolute;
+	content: "";
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 400%;
+	z-index: -1;
+	background: linear-gradient(130deg,greenyellow,pink,cyan);
+	border-radius: 100px;
+	animation: btn_animation 3s linear infinite;
+}
 
-		.btn_started
-		{
-			font-size: 15px;
-			padding: 10px 30px;
-			border-radius: 35px;
-			font-weight: bold;
-			color: black;
-			border: none;
-			margin-bottom: 20px;
-			position: relative;
-			z-index: 1;
-			overflow: hidden;
-			transition: 0.3s ease;
-			cursor: pointer;
-		}
-		.btn_started:hover
-		{
-			background: black;
-			color: white;
-		}
-		.btn_started::before
-		{
-			position: absolute;
-			content: "";
-			top:0;
-			left: 0;
-			width: 100%;
-			height: 400%;
-			z-index: -1;
-			background: linear-gradient(130deg,greenyellow,pink,cyan);
-			border-radius: 100px;
-			animation: btn_animation 3s linear infinite;
-		}
-		
-		.container_data
-		{
-			padding: 10px;
-			display: flex;
-			align-items: center;
-			justify-content:center;
-			flex-direction: column;
-			line-height: 1.5;
-			text-align: center;
-		}
+.container_data
+{
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.input_field
+{	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px auto 10px auto;
+	padding: 7px 12px 7px 10px;
+	border:none;
+	background-color: rgba(255, 255, 255, 0.4);
+	width: 90%;
+	border-radius: 5px 15px;
+	/* outline: 1px solid white; */
+	column-gap: 4px;
+	position: relative;
+	opacity: 1;
+}
+.input_field input {
+	font-size: 10px;
+	width: 100%;
+	outline: none;
+	background: none;
+	border:none;
+	color: black;
+}
+.input_field input:hover {
+	font-size: 14px;	
+}
+.btn_search {
+	font-size: 14px;
+	padding: 10px 15px;
+	background: linear-gradient(130deg,greenyellow,pink,cyan);
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	border-radius: 5px 15px ;
+	border:none;
+	font-weight: bold;
+	letter-spacing: 0.6px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	width:120px;
+	transition: 0.2s ease;
+	color: black;
+	font-weight: bold;
+}
+.btn_search:active {
+	transform: scale(1.1);
+}
+.btn_search::before {
+	position: absolute;
+	content: "";
+	top:5px;
+	left: 0;
+	width: 100%;
+	height: 400%;
+	z-index: -1;
+	background: linear-gradient(130deg,greenyellow,pink,cyan);
+	border-radius: 100px;
+	animation: btn_animation2 6s linear infinite;
+}
+
+.location_content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 4px;
+	margin: 10px auto;
+	font-weight: bold;
+	/* background: linear-gradient(150deg,purple,brown,darkgreen,aqua,peru); */
+	background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+
+.location_data p {
+	background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 5s ease-in-out infinite;
+}
+.date_day{
+	column-gap: normal;
+}
+
+.temperature {
+	position: relative;
+}
+.temperature h1 {
+	font-size: 80px;
+	-webkit-text-stroke:2px;
+	-webkit-text-color:white;
+	letter-spacing: 0.8px;
+	color: white;
+	transition: all .5s ease;
+	animation: neon_temperature 3s ease-in-out infinite alternate;
+}
+
+.temperature_img {
+	max-width: 150px;
+	object-fit: cover;
+	position: absolute;
+	top:0;
+	right: -70px;
+	animation: img_anim 2s linear infinite;
+}
+
+.temperature h2 {
+	margin-bottom: 5px;
+	color: white;
+	letter-spacing: 0.8px;
+	text-transform: capitalize;
+	background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+
+.temperature h3 {
+	width: 30px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 4px;
+	position: absolute;
+	margin-top: -80px;
+	opacity: 0.3;
+	overflow: hidden;
+	text-align: center;
 	
-		.input_field
-		{	
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin: 20px auto 10px auto;
-			padding: 7px 12px 7px 10px;
-			border:none;
-			background-color: rgba(255, 255, 255, 0.4);
-			width: 90%;
-			border-radius: 5px 15px;
-			/* outline: 1px solid white; */
-			column-gap: 4px;
-			position: relative;
-			opacity: 1;
-		}
-		.input_field input {
-			font-size: 10px;
-			width: 100%;
-			outline: none;
-			background: none;
-			border:none;
-			color: black;
-		}
-		.input_field input:hover {
-			font-size: 14px;	
-		}
-		.btn_search {
-			font-size: 14px;
-			padding: 10px 15px;
-			background: linear-gradient(130deg,greenyellow,pink,cyan);
-			background: rgba(0, 0, 0, 0.1);
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-			border-radius: 5px 15px ;
-			border:none;
-			font-weight: bold;
-			letter-spacing: 0.6px;
-			overflow: hidden;
-			position: relative;
-			z-index: 1;
-			width:120px;
-			transition: 0.2s ease;
-			color: black;
-			font-weight: bold;
-		}
-		.btn_search:active {
-			transform: scale(1.1);
-		}
-		.btn_search::before {
-			position: absolute;
-			content: "";
-			top:5px;
-			left: 0;
-			width: 100%;
-			height: 400%;
-			z-index: -1;
-			background: linear-gradient(130deg,greenyellow,pink,cyan);
-			border-radius: 100px;
-			animation: btn_animation2 6s linear infinite;
-		}
-		
-		.location_content {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			column-gap: 4px;
-			margin: 10px auto;
-			font-weight: bold;
-			/* background: linear-gradient(150deg,purple,brown,darkgreen,aqua,peru); */
-			background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 4s ease-in-out infinite;
-		}
-		
-		.location_data p {
-			background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 5s ease-in-out infinite;
-		}
-		.date_day{
-			column-gap: normal;
-		}
+}
 
-		.temperature {
-			position: relative;
-		}
-		.temperature h1 {
-			font-size: 80px;
-			-webkit-text-stroke:2px;
-			-webkit-text-color:white;
-			letter-spacing: 0.8px;
-			color: white;
-			transition: all .5s ease;
-			animation: neon_temperature 3s ease-in-out infinite alternate;
-		}
-		
-		.temperature_img {
-			max-width: 150px;
-			object-fit: cover;
-			position: absolute;
-			top:0;
-			right: -70px;
-			animation: img_anim 2s linear infinite;
-		}
-		
-		.temperature h2 {
-			margin-bottom: 5px;
-			color: white;
-			letter-spacing: 0.8px;
-			text-transform: capitalize;
-			background: linear-gradient(135deg,#ff00d2,#fed90f,#f5022a);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 4s ease-in-out infinite;
-		}
-
-		.temperature h3 {
-			width: 30px;
-			height: 30px;
-			background: rgba(255, 255, 255, 0.4);
-			border-radius: 4px;
-			position: absolute;
-			margin-top: -80px;
-			opacity: 0.3;
-			overflow: hidden;
-			text-align: center;
-			
-		}
-
-		.get_data {
-			width: 95%;
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), 
-				rgba(255, 255, 255, 0.1)) no-repeat center/cover;
-			padding: 15px 10px;
-			border-radius: 10px;
-			margin: 20px auto;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-		}
+.get_data {
+	width: 95%;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), 
+		rgba(255, 255, 255, 0.1)) no-repeat center/cover;
+	padding: 15px 10px;
+	border-radius: 10px;
+	margin: 20px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
 
 
-		.card_data {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-		}
-		.card_data i {
-			overflow: hidden;
-			margin-bottom: 5px;
-			background: rgba(0, 0, 0, 0.3);
-			border-radius: 50%;
-			width: 30px;
-			height: 30px;
-			color: white;
-			display: flex;
-			align-items: center;
-			justify-content:center ;
-			transition: all .5s ease;
-			animation: neon_temperature 3s ease-in-out infinite alternate;
-		} 
-		.card_data small {
-			font-weight: bold;
-			letter-spacing: 0.7px;
-			background: linear-gradient(150deg,purple,brown,blue,darkgreen,peru);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 4s ease-in-out infinite;
-		}
-		.card_data span {
-			font-weight: bold;
-			font-size: 12px;
-			background: linear-gradient(150deg,purple,brown,blue,darkgreen,peru);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 4s ease-in-out infinite;
-		}
+.card_data {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.card_data i {
+	overflow: hidden;
+	margin-bottom: 5px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content:center ;
+	transition: all .5s ease;
+	animation: neon_temperature 3s ease-in-out infinite alternate;
+} 
+.card_data small {
+	font-weight: bold;
+	letter-spacing: 0.7px;
+	background: linear-gradient(150deg,purple,brown,blue,darkgreen,peru);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
+.card_data span {
+	font-weight: bold;
+	font-size: 12px;
+	background: linear-gradient(150deg,purple,brown,blue,darkgreen,peru);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
 
 
-		.weather_forecasts {
-			width: 80%;
-			margin: auto;
-		}
-		.weather_forecasts h3 {
-			text-align: center;
-			padding:0px 10px;
-			background: linear-gradient(100deg, #03001e, #ec38bc,#7303c0,peru,blue);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 4s ease-in-out infinite;
-		}
-		
-		.list_card .list_card_data {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-flow: column;
-			background:linear-gradient(to bottom,rgba(255, 255, 255, 0.4),
-				rgba(255, 255, 255, 0.1)) no-repeat center/cover;
-			box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
-			border:1px solid white;
-			border-radius: 20px 5px;
-			width: 20%;
-			margin: 30px auto 20px auto;
-			padding: 10px;
-			position: relative;
-			z-index: 1;
-			text-align: center;
-			box-shadow: 3px 2px rgb(255,255,255,0.2);
-		}
-		.forecast_img {
-			width: 80px;
-			object-fit: cover;
-		}
-		.icon_overlay {
-			width: 30px;
-			height: 30px;
-			background: rgba(0,0,0,0.12);
-			box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-			position: absolute;
-			top:57%;
-			left: 50%;
-			border-radius: 50%;
-			transform: translate(-50%,-50%);
-			z-index: -1;
-		}
-		.list_card_data span {
-			font-weight: bold;
-			font-size: 13px;
-			margin-top: 2px;
-			background: rgba(0, 0, 0, 0.3);
-			color: white;
-			padding: 10px;
-			border-radius: 35px;
-			background: linear-gradient(80deg,#c31432,#240b36,#7303c0);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 2s ease-in-out infinite;
-		}
-		.list_card_data small {
-			font-weight: bold;
-			font-size: 15px;
-			margin-bottom: 5px;
-			background: linear-gradient(80deg,#c31432,#240b36,#7303c0);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 300% 300%;
-			animation: gradient 2s ease-in-out infinite;
-		}
+.weather_forecasts {
+	width: 80%;
+	margin: auto;
+}
+.weather_forecasts h3 {
+	text-align: center;
+	padding:0px 10px;
+	background: linear-gradient(100deg, #03001e, #ec38bc,#7303c0,peru,blue);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 4s ease-in-out infinite;
+}
 
-		.swiper {
-			max-width: 100%;
-			margin: auto;
-			padding:0 5px 0 5px;
-		}
-		.container {
-			position: relative;
-			transform: translateY(0);
-			transition: 0.8s ease;
-			width: 100%;
-			/* max-width: 100%; */
-			height: 100%;
-			display: none;
-			animation: effect 1.2s ease-in-out;
-			transition-delay: .3s ;
-			opacity: 0;
-		}
-		.container.active {
-			transform: translateY(-100%);
-			display: block;
-			opacity: 1;
-		}
+.list_card .list_card_data {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	background:linear-gradient(to bottom,rgba(255, 255, 255, 0.4),
+		rgba(255, 255, 255, 0.1)) no-repeat center/cover;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border:1px solid white;
+	border-radius: 20px 5px;
+	width: 20%;
+	margin: 30px auto 20px auto;
+	padding: 10px;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	box-shadow: 3px 2px rgb(255,255,255,0.2);
+}
+.forecast_img {
+	width: 80px;
+	object-fit: cover;
+}
+.icon_overlay {
+	width: 30px;
+	height: 30px;
+	background: rgba(0,0,0,0.12);
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top:57%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+}
+.list_card_data span {
+	font-weight: bold;
+	font-size: 13px;
+	margin-top: 2px;
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+	padding: 10px;
+	border-radius: 35px;
+	background: linear-gradient(80deg,#c31432,#240b36,#7303c0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 2s ease-in-out infinite;
+}
+.list_card_data small {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 5px;
+	background: linear-gradient(80deg,#c31432,#240b36,#7303c0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300% 300%;
+	animation: gradient 2s ease-in-out infinite;
+}
+
+.swiper {
+	max-width: 100%;
+	margin: auto;
+	padding:0 5px 0 5px;
+}
+.container {
+	position: relative;
+	transform: translateY(0);
+	transition: 0.8s ease;
+	width: 100%;
+	/* max-width: 100%; */
+	height: 100%;
+	display: none;
+	animation: effect 1.2s ease-in-out;
+	transition-delay: .3s ;
+	opacity: 0;
+}
+.container.active {
+	transform: translateY(-100%);
+	display: block;
+	opacity: 1;
+}
+
+.go-back i {
+	font-size: 30px;
+	color: #000;
+}
