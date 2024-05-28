@@ -26,3 +26,21 @@ ALTER TABLE `his_user`
 --
 ALTER TABLE `his_user`
   MODIFY `ad_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Table structure for table `his_pwdresets`
+--
+CREATE TABLE `his_pwdresets` (
+  `id` int(20) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Indexes for table `his_pwdresets`
+--
+ALTER TABLE `his_pwdresets`
+  ADD PRIMARY KEY (`id`);
+--
+-- AUTO_INCREMENT for table `his_pwdresets`
+--
+ALTER TABLE `his_pwdresets`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;

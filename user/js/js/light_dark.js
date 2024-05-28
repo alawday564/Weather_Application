@@ -36,3 +36,4 @@ btn_light_dark.addEventListener('click', () => {
 		icon.classList.remove('animated');
 	}, 5000)
 })
+

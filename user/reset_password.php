@@ -10,7 +10,7 @@
 
         $query="INSERT INTO his_pwdresets (email, token, status, pwd) VALUES(?,?,?,?)";
         $stmt = $connect->prepare($query);
-        $rc=$stmt->bind_param('', $email, $token, $status, $pwd);
+        $rc=$stmt->bind_param(' ', $email, $token, $status, $pwd);
         $stmt->execute();
 
         if($stmt)
@@ -52,7 +52,7 @@
             { 
                 swal("Success","<?php echo $success;?>","success");
             },
-                100);
+                1000);
         </script>
     <?php } ?>
 
@@ -63,7 +63,7 @@
             { 
                 swal("Failed","<?php echo $err;?>","Failed");
             },
-                100);
+                1000);
         </script>
     <?php } ?>
 </head>
@@ -75,7 +75,7 @@
                         <div class="card bg-pattern">
                             <div class="card-body p-4">
                                 <div class="text-center w-75 m-auto">
-                                    <a href="0_his_doc_reset_pwd.php">
+                                    <a href="reset_password.php">
                                         <span><img src="images/logo-dark.png" alt="" height="22"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Enter your email address and we'll send you an email with instructions to reset your password.</p>

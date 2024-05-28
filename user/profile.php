@@ -171,7 +171,7 @@
                                                                     <div class="input-group-prepend">
                                                                         <span class="input-group-text"><i class='bx bxl-twitter'></i></span>
                                                                     </div>
-                                                                    <input type="text" class="form-control" id="social-tw" placeholder="Username">
+                                                                    <input type="text" class="form-control" id="social-tw" placeholder="Url">
                                                                 </div>
                                                             </div>
                                                         </div> 
@@ -196,7 +196,7 @@
                                                                     <div class="input-group-prepend">
                                                                         <span class="input-group-text"><i class='bx bxl-github'></i></span>
                                                                     </div>
-                                                                    <input type="text" class="form-control" id="social-gh" placeholder="Username">
+                                                                    <input type="text" class="form-control" id="social-gh" placeholder="Url">
                                                                 </div>
                                                             </div>
                                                         </div> 

@@ -35,6 +35,7 @@
         <link rel="stylesheet" href="css/css/layout_vip.css" type="text/css">
         <link rel="stylesheet" href="css/css/dropdown.css" type="text/css">
         <link rel="stylesheet" href="css/css/progress_bar.css" type="text/css">
+        <link rel="stylesheet" href="css/css/tooltip.css" type="text/css">
     </head>
     <body>
         <article class="wrapper">
@@ -93,11 +94,14 @@
                 </div>
 
                 <div class="date-time">
-                    <p id="date-time" class="title-3" ></p>
+                    <p id="date-time" class="title-3"></p>
                 </div>
 
                 <div class="temperature">
+                <div class="tooltip">
                     <h1 id="temp"></h1>
+                    <div class="tooltip_temp"></div>
+                </div>
                     <span class="temp-unit title-1">°C</span>
                     <img id="icon" src="icons/sun/4.png" 
                         width="64" height="54" alt="" />
@@ -161,9 +165,9 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 ari_icon_text"></p>
-                                    <p class="text_set title-3 air_text"></p>
+                                    <p class="text_set title-3 air-quality-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 air_status"></p>
+                                <p class="icon_ani title-1 air_icon_status"></p>
                             </div>
                         </div>
 
@@ -175,10 +179,10 @@
                                     <p class="title-1 uv-index"></p>
                                 </div>
                                 <div class="text_icon_2">
-                                    <p class="icon_ani_2 title-1 uv-icon-text"></p>
+                                    <p class="icon_ani_2 title-1 uv_icon_text"></p>
                                     <p class="text_set title-3 uv-text"></p>
                                 </div>
-                                <p class="icon_ani title-1 uv-status"></p>
+                                <p class="icon_ani title-1 uv_icon_status"></p>
                             </div>
                         </div>
 
@@ -192,9 +196,9 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 humidity_icon_text"></p>
-                                    <p class="text_set title-3 humidity_text"></p>
+                                    <p class="text_set title-3 humidity-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 humidity_status"></p>
+                                <p class="icon_ani title-1 humidity_icon_status"></p>
                             </div>
                         </div>
 
@@ -208,14 +212,14 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 wind_icon_text"></p>
-                                    <p class="text_set title-3 wind_text"></p>
+                                    <p class="text_set title-3 wind-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 wind_status"></p>
+                                <p class="icon_ani title-1 wind_icon_status"></p>
                             </div>
                         </div>
 
                         <div class="card card-sm highlights-card">
-                            <h3 class="title-4">windgust</h3>
+                            <h3 class="title-4">Windgust</h3>
                             <div class="wrapper">
                                 <div class="text_icon">
                                     <span class="m-icon">wind_power</span>
@@ -224,9 +228,9 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 windgust_icon_text"></p>
-                                    <p class="text_set title-3 windgust_text"></p>
+                                    <p class="text_set title-3 windgust-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 windgust_status"></p>
+                                <p class="icon_ani title-1 windgust_icon_status"></p>
                             </div>
                         </div>
 
@@ -240,9 +244,9 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 visibility_icon_text"></p>
-                                    <p class="text_set title-3 visibility_text"></p>
+                                    <p class="text_set title-3 visibility-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 visibility_status"></p>
+                                <p class="icon_ani title-1 visibility_icon_status"></p>
                             </div>
                         </div>
 
@@ -256,9 +260,9 @@
                                 </div>
                                 <div class="text_icon_2">
                                     <p class="icon_ani_2 title-1 pressure_icon_text"></p>
-                                    <p class="text_set title-3 pressure_text"></p>
+                                    <p class="text_set title-3 pressure-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 pressure_status"></p>
+                                <p class="icon_ani title-1 pressure_icon_status"></p>
                             </div>
                         </div>
 
@@ -267,14 +271,14 @@
                             <div class="wrapper">
                                 <div class="text_icon">
                                     <span class="m-icon">nights_stay</span>
-                                    <p class="title-1 moonphase"></p>
+                                    <p class="title-1 moon_phase"></p>
                                     <p class="title-1"><sub></sub></p>
                                 </div>
                                 <div class="text_icon_2">
-                                    <p class="icon_ani_2 title-1 moonphase_icon_text"></p>
-                                    <p class="text_set title-3 moonphase_text"></p>
+                                    <p class="icon_ani_2 title-1 moon_phase_icon_text"></p>
+                                    <p class="text_set title-3 moon_phase-status"></p>
                                 </div>
-                                <p class="icon_ani title-1 moonphase_status"></p>
+                                <p class="icon_ani title-1 moon_phase_icon_status"></p>
                             </div>
                         </div>
 
@@ -283,9 +287,13 @@
                             <div class="wrapper">
                                 <div class="text_icon">
                                     <span class="m-icon">add_reaction</span>
-                                    <p class="title-1 feelslike"></p>
-                                    <p class="text_set title-3 feelslike_text"></p>
+                                    <p class="title-1 feel_like"></p>
                                 </div>
+                                <div class="text_icon_2">
+                                    <p class="icon_ani_2 title-1 feel_icon_text"></p>
+                                    <p class="text_set title-3 feel_like-status"></p>
+                                </div>
+                                <p class="icon_ani title-1 feel_icon_status"></p>
                             </div>
                         </div>
                         
@@ -293,7 +301,7 @@
                 </div> 
             </section>
 
-            <section class="forecast card card-lg">
+            <section class="hourly-forecast card card-lg">
                 <h2 class="title-1">Forecast</h2>
                 <nav>
                     <ul class="options">
@@ -305,13 +313,10 @@
                         <button class="fahrenheit">°F</button>
                     </ul>
                 </nav>
+                
                 <div class="slider-container">
                     <ul class="slider-list" id="weather-cards">
-                        <li class="slider-item">
-                            <div class="card card-sm slider-card">
-                                <!--  -->
-                            </div>
-                        </li>
+                        
                     </ul>
                 </div>
             </section>

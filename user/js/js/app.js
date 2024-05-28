@@ -230,11 +230,11 @@ function changeBackground(condition) {
     if (condition === "partly-cloudy-day") {
         bg = "https://i.ibb.co/qNv7NxZ/pc.webp";
     } else if (condition === "partly-cloudy-night") {
-        bg = "https://i.ibb.co/RDfPqXz/pcn.jpg";
+        bg = "https://wallpaperaccess.com/full/5481081.jpg";
     } else if (condition === "rain") {
         bg = "https://i.ibb.co/h2p6Yhd/rain.webp";
     } else if (condition === "clear-day") {
-        bg = "https://i.ibb.co/WGry01m/cd.jpg";
+        bg = "https://th.bing.com/th/id/R.d413573eaf9fbdcdf59ba063b5c3c19e?rik=FuN86QYU1W5X7Q&pid=ImgRaw&r=0";
     } else if (condition === "clear-night") {
         bg = "https://i.ibb.co/kqtZ1Gx/cn.jpg";
     } else {
