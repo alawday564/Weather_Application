@@ -2,38 +2,38 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    font-family: "Arial", sans-serif;
 }
-
-.tooltip:hover .tooltip_temp {
+  
+.tooltip:hover .tooltip_text {
     visibility: visible;
     opacity: 1;
 }
-
-.tooltip_temp {
+  
+.tooltip_text {
     visibility: hidden;
-    width: 160px;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
     text-align: center;
-    border-radius: 8px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    top: 125%;
     left: 50%;
-    margin-left: -80px;
+    margin-left: -100px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 1.5s;
 }
-
-.tooltip_temp::after {
+  
+.tooltip_text::after {
     content: "";
     position: absolute;
-    top: 100%;
+    top: -20px;
     left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    margin-left: -10px;
+    border-width: 10px;
     border-style: solid;
-    border-color: #333 transparent transparent transparent;
+    border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
 }

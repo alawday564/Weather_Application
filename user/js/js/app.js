@@ -158,7 +158,7 @@ function getWeatherData(city, unit, hourlyorWeek) {
             sunSet.innerText = covertTimeTo12HourFormat(today.sunset);
         })
         .catch((err) => {
-            alert("City not found in our database", 2000);
+            alert("Invalid City Name", 2000);
         });
 }
 
@@ -232,7 +232,7 @@ function changeBackground(condition) {
     } else if (condition === "partly-cloudy-night") {
         bg = "https://wallpaperaccess.com/full/5481081.jpg";
     } else if (condition === "rain") {
-        bg = "https://i.ibb.co/h2p6Yhd/rain.webp";
+        bg = "https://img3.thuthuatphanmem.vn/uploads/2019/07/19/hinh-anh-troi-mua-dep-lang-man-nhat_015500515.jpg";
     } else if (condition === "clear-day") {
         bg = "https://th.bing.com/th/id/R.d413573eaf9fbdcdf59ba063b5c3c19e?rik=FuN86QYU1W5X7Q&pid=ImgRaw&r=0";
     } else if (condition === "clear-night") {

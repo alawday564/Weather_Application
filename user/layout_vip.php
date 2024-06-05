@@ -75,6 +75,24 @@
                             </a>
                         </div>
                     </div>
+
+                    <div class="box_save">
+                        <div class="tooltip">
+                            <div class="tooltip_text">Save the next 5 days forecast data into Excel</div>
+                            <button class="save_forecast"
+                                onclick="SavetoExcel_forecast()">
+                                Forecast
+                            </button>
+                        </div>
+                        
+                        <div class="tooltip">
+                            <div class="tooltip_text">Save current date data into Excel</div>
+                            <button class="save_day"
+                                onclick="SavetoExcel_NowDay()">
+                                Current
+                            </button>
+                        </div>
+                    </div>
                 </section>
             <?php }?>
 
@@ -98,10 +116,7 @@
                 </div>
 
                 <div class="temperature">
-                <div class="tooltip">
                     <h1 id="temp"></h1>
-                    <div class="tooltip_temp"></div>
-                </div>
                     <span class="temp-unit title-1">°C</span>
                     <img id="icon" src="icons/sun/4.png" 
                         width="64" height="54" alt="" />
@@ -322,6 +337,8 @@
             </section>
             
         </article>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+        <script src="js/js/save_to_excel.js"></script>
         <script src="js/js/app.js"></script>
         <script src="js/js/dropdown.js"></script>
         <script src="js/js/progress_bar.js"></script>

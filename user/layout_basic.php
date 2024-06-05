@@ -67,8 +67,16 @@
                     <i class='bx bx-search-alt'></i>
                     <input id="input_search_id" class="input_search" type="text" name="search"
                         placeholder="Search City..." autocomplete="chrome">
-                    <button id="btn_search_id" type="button" name="" 
-                        class="btn_search" onclick="style_alert('')">Search</button>
+                    <div class="box_btn">
+                        <button id="btn_search_id" type="button" name="" 
+                            class="btn_search" onclick="style_alert('')">Search
+                        </button>
+                        <button class="btn_save"
+                            onclick="SavetoExcel_NowDay_basic()">
+                            <!-- onclick="SavetoExcel_forecast_basic()"> -->
+                            Save
+                        </button>
+                    </div>
                     <ul class="notification"></ul>
                     <div class="btn_light_dark">
                         <div class="btn_darkmode">
@@ -144,6 +152,7 @@
                     </ul>
                 </div>
             </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="js/js/weather_start.js" ></script>
         <script src="js/js/swiper.js"></script>
@@ -152,5 +161,6 @@
         <script src="js/js/custom_alert.js"></script>
         <script src="js/js/light_dark.js"></script>
         <script src="js/js/auto_complete.js"></script>
+        <script src="js/js/save_to_excel.js"></script>
     </body>
 </html>
